@@ -1,0 +1,12 @@
+#create the storageclass 
+#this is the storageclass prometheus will use to save metrics
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: gp4
+provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer
+allowVolumeExpansion: true
+reclaimPolicy: Delete  # use Retain if you want data be there even if when the pv is destroyed
+parameters:
+  type: gp3

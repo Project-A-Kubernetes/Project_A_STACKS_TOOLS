@@ -1,0 +1,21 @@
+#apply this to the cluster 
+apiVersion: argoproj.io/v1alpha1 
+kind: Application 
+metadata:
+  name: argocd 
+  namespace: argocd 
+spec: 
+  project: default 
+  source: 
+    repoURL: "git@github.com:Project-A-Kubernetes/Project_A_Prometheus-stacks.git"
+    targetRevision: main 
+    path:
+      prometheus-stacks/storage/ 
+  destination: 
+    server: 'https://kubernetes.default.svc' 
+    namespace: Kube-system 
+  syncPolicy:
+    automated: 
+      prune: true 
+      selfheal: true 
+    #syncOption:  ["PruneLast=true"]
