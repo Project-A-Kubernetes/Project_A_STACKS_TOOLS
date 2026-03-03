@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default 
   source:
-    repoURL: "git@github.com:Project-A-Kubernetes/Project_A_Prometheus-stacks.git"
+    repoURL: "https://github.com/Project-A-Kubernetes/Project_A_Prometheus-stacks.git"
     targetRevision: main 
     path: storage/ 
   destination: 
