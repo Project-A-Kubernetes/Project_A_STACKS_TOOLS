@@ -9,10 +9,10 @@ spec:
     repoURL: "https://prometheus-community.github.io/helm-charts" 
     chart: kube-prometheus-stack
     targetRevision: 82.2.1
+    path: prometheus-stacks/stacks
     helm:
       valueFiles:
-        - ./value.yml
-    path: stacks/
+        - value.yml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: monitor 
