@@ -2,9 +2,7 @@
 
 grafana: 
   enabled: true 
-  admin: 
-    existingSecret: grafana-admin
-    passwordKey: admin-password
+  adminPassword: ""
   service:
     type: ClusterIP 
 
