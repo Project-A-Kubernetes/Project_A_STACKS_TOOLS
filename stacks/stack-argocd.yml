@@ -11,7 +11,7 @@ spec:
     targetRevision: 82.2.1
     helm:
       valueFiles:
-        - $values-repo/prometheus-stacks/stacks/value.yml
+        - $values-repo/stacks/value.yml
 
   - repoURL: "https://github.com/Project-A-Kubernetes/Project_A_Prometheus-stacks.git"
     targetRevision: main 
