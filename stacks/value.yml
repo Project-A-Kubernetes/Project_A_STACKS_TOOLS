@@ -12,7 +12,7 @@ prometheus:
     storageSpec: 
       volumeClaimTemplate: 
         spec: 
-          storageClassName: gp3 #cheap and reduce infra cost
+          storageClassName: standard #to be updated to gp3 #cheap and reduce infra cost
           accessModes: ["ReadWriteOnce"]
           resources: 
             requests: 
@@ -23,7 +23,7 @@ alertmanager:
     storage: 
       volumeClaimTemplate: 
         spec: 
-          storageClassName: gp3 #cheap and reduce cost by using this type of storage 
+          storageClassName: standard #to be updated to gp3 #cheap and reduce cost by using this type of storage 
           accessModes: ["ReadWriteOnce"]
           resources: 
             requests: 
