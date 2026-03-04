@@ -11,7 +11,7 @@ spec:
     targetRevision: 82.2.1
     helm:
       valueFiles:
-        - ./value.yml 
+        - prometheus-stacks/stacks/value.yml
     path: stacks/
   destination:
     server: "https://kubernetes.default.svc"
