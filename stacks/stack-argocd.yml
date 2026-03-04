@@ -6,13 +6,17 @@ metadata:
 spec:
   project: default 
   source:
-    repoURL: "https://prometheus-community.github.io/helm-charts" 
+  - repoURL: "https://prometheus-community.github.io/helm-charts" 
     chart: kube-prometheus-stack
     targetRevision: 82.2.1
-    path: prometheus-stacks/stacks
     helm:
       valueFiles:
-        - value.yml
+        - $values-repo/prometheus-stacks/stacks/value.yml
+
+  - repoURL: "https://github.com/Project-A-Kubernetes/Project_A_Prometheus-stacks.git"
+    targetRevision: main 
+    ref: values-repo
+
   destination:
     server: "https://kubernetes.default.svc"
     namespace: monitor 
