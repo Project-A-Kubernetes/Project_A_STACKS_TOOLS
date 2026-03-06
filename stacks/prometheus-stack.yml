@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "https://github.com/Project-A-Kubernetes/Project_A_Prometheus-stacks.git"
-    path: "stacks/prometheus-stacks/charts/kube-prometheus-stack"
+    repoURL: https://github.com/Project-A-Kubernetes/Project_A_Prometheus-stacks.git
+    path: stacks/prometheus-stacks/charts/kube-prometheus-stack
     targetRevision: main
     helm:
       valueFiles:
-        - "stacks/prometheus-stacks/charts/kube-prometheus-stack/value.yml"
+      - ../../../value.yml
       skipCrds: true 
   destination:
     server: "https://kubernetes.default.svc"
