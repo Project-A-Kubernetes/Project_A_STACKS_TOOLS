@@ -7,11 +7,9 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Project-A-Kubernetes/Project_A_Prometheus-stacks.git
-    path: stacks/prometheus-stacks/charts/kube-prometheus-stack
+    path: stacks/kube-prometheus-stack
     targetRevision: main
-    helm:
-      valueFiles:
-      - ../../../value.yml
+    helm: 
       skipCrds: true 
   destination:
     server: "https://kubernetes.default.svc"
@@ -20,3 +18,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  syncOptions:
+  - createNamespace=true 
