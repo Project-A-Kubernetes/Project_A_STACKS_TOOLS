@@ -9,7 +9,6 @@ spec:
     repoURL: "https://github.com/Project-A-Kubernetes/Project_A_Prometheus-stacks.git"
     path: "prometheus-stacks/kube-prometheus-stack"
     targetRevision: main
-    chart: kube-prometheus-stack
     helm:
       valueFiles:
         - ../stacks/value.yml  
