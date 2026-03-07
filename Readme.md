@@ -56,9 +56,6 @@ argocd repo add https://github.com/Project-A-KubernetesProject_A_Prometheus-stac
   --github-app-installation-id INSTALLATION_ID \
   --github-app-private-key-path PRIVATE_KEY_PATH
 
----
-argocd repo add https://prometheus-community.github.io/helm-charts --type helm 
-# for the prometheus stacks. 
-
-#by doing this any other future configuration will be automated just with a little change to the repository
+apply the argocd application to the cluster ..
+#By doing this any other future configuration will be automated just with any change to the repository
 ```
