@@ -15,7 +15,7 @@ spec:
         controller:
           replicaCount: 
           service:
-            type: LoadBalancer
+            type: ClusterIP  #for the sake of testing now we will use cluster service type  
 
   destination:
     server: https://kubernetes.default.svc
