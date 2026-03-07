@@ -36,8 +36,6 @@ This connected my argocd repo server to my github repo (over HTTPS) as the only 
 3. Prometheus Helm Chart Configuration
 
     - Used the kube-prometheus-stack Helm chart from the Prometheus Community Helm repository.
-    - Created value.yml with custom configuration (enabled grafana, alertmanager, storage settings, prometheus).
-    - Committed value.yml to Git so Argo CD can reference it during deployment.
 
 4. Persistent Storage Configuration
 
