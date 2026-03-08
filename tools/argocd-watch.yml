@@ -2,10 +2,8 @@
 apiVersion:  argoproj.io/v1alpha1  
 kind: Application 
 metadata:
-  name: sc-argocd 
+  name: tool-cluster 
   namespace: argocd 
-  annotations:
-    argocd.argoproj.io/sync-options: ServerSideApply=true
 
 spec:
   project: default 
@@ -20,4 +18,6 @@ spec:
     automated:
       prune: true 
       selfHeal: true 
+    syncOptions:
+      - ServerSideApply=true 
   
