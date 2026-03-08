@@ -5,20 +5,20 @@ metadata:
   namespace: argocd
 spec:
   project: default
+
   source:
-    repoURL: https://github.com/Project-A-Kubernetes/Project_A_Prometheus-stacks.git
-    path: stacks/kube-prometheus-stack
-    targetRevision: main
-    helm: 
-      skipCrds: true 
+    repoURL: https://prometheus-community.github.io/helm-charts
+    chart: kube-prometheus-stack
+    targetRevision: 56.6.2
+    helm:
+      releaseName: kube-prometheus-stack
   destination:
-    server: "https://kubernetes.default.svc"
-    namespace: monitor
+    server: https://kubernetes.default.svc
+    namespace: monitoring
+
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    retry:
-      limit: 5
     syncOptions:
-      - createNamespace=true 
+      - CreateNamespace=true
