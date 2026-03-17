@@ -4,6 +4,9 @@
 This repository demonstrates the deployment of the Prometheus monitoring stack, ingress-nginx-controller, certificate-manager etc on a Kubernetes cluster using Helm and Argo CD. The setup includes GitOps-based management, persistent storage configuration, and automated application syncing.
 ## Simple Deployment diagram 
 ![Architecture Diagram](image.png)
+
+---
+![Architecture Diagram](image1.png)
 ## Repository Structure
 ```
 prometheus-stacks/

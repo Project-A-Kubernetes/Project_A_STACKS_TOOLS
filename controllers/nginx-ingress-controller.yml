@@ -13,9 +13,9 @@ spec:
     helm:
       values: | #2 for high availability we use two replicas or more
         controller:
-          replicaCount: 
+          replicaCount: 2
           service:
-            type: ClusterIP  #for the sake of testing now we will use cluster service type  
+            type: LoadBalancer 
 
   destination:
     server: https://kubernetes.default.svc
